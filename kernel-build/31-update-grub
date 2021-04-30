@@ -1,0 +1,5 @@
+#!/bin/bash
+
+mount /boot
+grub-mkconfig -o /boot/grub/grub.cfg
+umount /boot

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+genkernel --luks --mountboot --lvm --no-clean kernel
