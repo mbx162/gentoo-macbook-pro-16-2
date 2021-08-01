@@ -18,7 +18,7 @@ diff --git a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/chip.c b/drivers/n
 index a3a257089696..6c39415a69d6 100644
 --- a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/chip.c
 +++ b/drivers/net/wireless/broadcom/brcm80211/brcmfmac/chip.c
-@@ -723,6 +723,7 @@ static u32 brcmf_chip_tcm_rambase(struct brcmf_chip_priv *ci)
+@@ -724,6 +724,7 @@ static u32 brcmf_chip_tcm_rambase(struct brcmf_chip_priv *ci)
  		return 0x200000;
  	case BRCM_CC_4359_CHIP_ID:
  		return (ci->pub.chiprev < 9) ? 0x180000 : 0x160000;
@@ -46,7 +46,7 @@ index 39381cbde89e..60e3b0ce4fd7 100644
  	BRCMF_FW_ENTRY(BRCM_CC_4356_CHIP_ID, 0xFFFFFFFF, 4356),
  	BRCMF_FW_ENTRY(BRCM_CC_43567_CHIP_ID, 0xFFFFFFFF, 43570),
  	BRCMF_FW_ENTRY(BRCM_CC_43569_CHIP_ID, 0xFFFFFFFF, 43570),
-@@ -2098,6 +2100,7 @@ static const struct pci_device_id brcmf_pcie_devid_table[] = {
+@@ -2102,6 +2104,7 @@ static const struct pci_device_id brcmf_pcie_devid_table[] = {
  	BRCMF_PCIE_DEVICE(BRCM_PCIE_4350_DEVICE_ID),
  	BRCMF_PCIE_DEVICE_SUB(0x4355, BRCM_PCIE_VENDOR_ID_BROADCOM, 0x4355),
  	BRCMF_PCIE_DEVICE(BRCM_PCIE_4354_RAW_DEVICE_ID),
@@ -66,7 +66,7 @@ index c6c4be05159d..777ffdbce230 100644
  #define BRCM_CC_4356_CHIP_ID		0x4356
  #define BRCM_CC_43566_CHIP_ID		43566
  #define BRCM_CC_43567_CHIP_ID		43567
-@@ -66,6 +67,7 @@
+@@ -67,6 +68,7 @@
  #define BRCM_PCIE_4350_DEVICE_ID	0x43a3
  #define BRCM_PCIE_4354_DEVICE_ID	0x43df
  #define BRCM_PCIE_4354_RAW_DEVICE_ID	0x4354

@@ -26,7 +26,7 @@ diff --git a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/chip.c b/drivers/n
 index a3a257089696..039dcf7853a6 100644
 --- a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/chip.c
 +++ b/drivers/net/wireless/broadcom/brcm80211/brcmfmac/chip.c
-@@ -733,7 +733,7 @@ static u32 brcmf_chip_tcm_rambase(struct brcmf_chip_priv *ci)
+@@ -734,7 +734,7 @@ static u32 brcmf_chip_tcm_rambase(struct brcmf_chip_priv *ci)
  	return 0;
  }
  
@@ -35,7 +35,7 @@ index a3a257089696..039dcf7853a6 100644
  {
  	struct brcmf_chip_priv *ci = container_of(pub, struct brcmf_chip_priv,
  						  pub);
-@@ -744,7 +744,9 @@ int brcmf_chip_get_raminfo(struct brcmf_chip *pub)
+@@ -745,7 +745,9 @@ int brcmf_chip_get_raminfo(struct brcmf_chip *pub)
  	if (mem) {
  		mem_core = container_of(mem, struct brcmf_core_priv, pub);
  		ci->pub.ramsize = brcmf_chip_tcm_ramsize(mem_core);
@@ -46,7 +46,7 @@ index a3a257089696..039dcf7853a6 100644
  		if (!ci->pub.rambase) {
  			brcmf_err("RAM base not provided with ARM CR4 core\n");
  			return -EINVAL;
-@@ -755,7 +757,9 @@ int brcmf_chip_get_raminfo(struct brcmf_chip *pub)
+@@ -756,7 +758,9 @@ int brcmf_chip_get_raminfo(struct brcmf_chip *pub)
  			mem_core = container_of(mem, struct brcmf_core_priv,
  						pub);
  			ci->pub.ramsize = brcmf_chip_sysmem_ramsize(mem_core);
@@ -57,7 +57,7 @@ index a3a257089696..039dcf7853a6 100644
  			if (!ci->pub.rambase) {
  				brcmf_err("RAM base not provided with ARM CA7 core\n");
  				return -EINVAL;
-@@ -941,7 +945,7 @@ int brcmf_chip_dmp_erom_scan(struct brcmf_chip_priv *ci)
+@@ -942,7 +946,7 @@ int brcmf_chip_dmp_erom_scan(struct brcmf_chip_priv *ci)
  	return 0;
  }
  
@@ -66,7 +66,7 @@ index a3a257089696..039dcf7853a6 100644
  {
  	struct brcmf_core *core;
  	u32 regdata;
-@@ -1014,7 +1018,7 @@ static int brcmf_chip_recognition(struct brcmf_chip_priv *ci)
+@@ -1015,7 +1019,7 @@ static int brcmf_chip_recognition(struct brcmf_chip_priv *ci)
  		brcmf_chip_set_passive(&ci->pub);
  	}
  
@@ -75,7 +75,7 @@ index a3a257089696..039dcf7853a6 100644
  }
  
  static void brcmf_chip_disable_arm(struct brcmf_chip_priv *chip, u16 id)
-@@ -1088,7 +1092,8 @@ static int brcmf_chip_setup(struct brcmf_chip_priv *chip)
+@@ -1089,7 +1093,8 @@ static int brcmf_chip_setup(struct brcmf_chip_priv *chip)
  }
  
  struct brcmf_chip *brcmf_chip_attach(void *ctx,
@@ -85,7 +85,7 @@ index a3a257089696..039dcf7853a6 100644
  {
  	struct brcmf_chip_priv *chip;
  	int err = 0;
-@@ -1117,7 +1122,7 @@ struct brcmf_chip *brcmf_chip_attach(void *ctx,
+@@ -1118,7 +1123,7 @@ struct brcmf_chip *brcmf_chip_attach(void *ctx,
  	if (err < 0)
  		goto fail;
  
@@ -159,7 +159,7 @@ diff --git a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/pcie.c b/drivers/n
 index 39381cbde89e..a9575ae8add1 100644
 --- a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/pcie.c
 +++ b/drivers/net/wireless/broadcom/brcm80211/brcmfmac/pcie.c
-@@ -1772,7 +1772,7 @@ static void brcmf_pcie_setup(struct device *dev, int ret,
+@@ -1774,7 +1774,7 @@ static void brcmf_pcie_setup(struct device *dev, int ret,
  	nvram_len = fwreq->items[BRCMF_PCIE_FW_NVRAM].nv_data.len;
  	kfree(fwreq);
  
@@ -168,7 +168,7 @@ index 39381cbde89e..a9575ae8add1 100644
  	if (ret) {
  		brcmf_err(bus, "Failed to get RAM info\n");
  		goto fail;
-@@ -1884,7 +1884,7 @@ brcmf_pcie_probe(struct pci_dev *pdev, const struct pci_device_id *id)
+@@ -1886,7 +1886,7 @@ brcmf_pcie_probe(struct pci_dev *pdev, const struct pci_device_id *id)
  
  	devinfo->pdev = pdev;
  	pcie_bus_dev = NULL;
@@ -181,7 +181,7 @@ diff --git a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/sdio.c b/drivers/n
 index ac3ee93a2378..d4bf1c7e3c81 100644
 --- a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/sdio.c
 +++ b/drivers/net/wireless/broadcom/brcm80211/brcmfmac/sdio.c
-@@ -3962,7 +3962,7 @@ brcmf_sdio_probe_attach(struct brcmf_sdio *bus)
+@@ -3967,7 +3967,7 @@ brcmf_sdio_probe_attach(struct brcmf_sdio *bus)
  		goto fail;
  	}
  

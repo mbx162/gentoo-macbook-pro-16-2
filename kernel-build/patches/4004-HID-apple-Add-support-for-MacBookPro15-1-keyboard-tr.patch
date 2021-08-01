@@ -22,7 +22,7 @@ diff --git a/drivers/hid/hid-apple.c b/drivers/hid/hid-apple.c
 index 9c4903b3a1c1..bf8dfca762a7 100644
 --- a/drivers/hid/hid-apple.c
 +++ b/drivers/hid/hid-apple.c
-@@ -733,6 +733,8 @@ static const struct hid_device_id apple_devices[] = {
+@@ -735,6 +735,8 @@ static const struct hid_device_id apple_devices[] = {
  		.driver_data = APPLE_HAS_FN | APPLE_BACKLIGHT_CTL },
  	{ HID_USB_DEVICE(USB_VENDOR_ID_APPLE, USB_DEVICE_ID_APPLE_WELLSPRINGT2_J132),
  		.driver_data = APPLE_HAS_FN | APPLE_BACKLIGHT_CTL },
@@ -35,7 +35,7 @@ diff --git a/drivers/hid/hid-ids.h b/drivers/hid/hid-ids.h
 index b0574939b59f..c5340b03a56a 100644
 --- a/drivers/hid/hid-ids.h
 +++ b/drivers/hid/hid-ids.h
-@@ -167,6 +167,7 @@
+@@ -172,6 +172,7 @@
  #define USB_DEVICE_ID_APPLE_WELLSPRING9_JIS		0x0274
  #define USB_DEVICE_ID_APPLE_WELLSPRINGT2_J140K	0x027a
  #define USB_DEVICE_ID_APPLE_WELLSPRINGT2_J132	0x027b
@@ -47,7 +47,7 @@ diff --git a/drivers/hid/hid-quirks.c b/drivers/hid/hid-quirks.c
 index 7df65c99e984..32419a34a64d 100644
 --- a/drivers/hid/hid-quirks.c
 +++ b/drivers/hid/hid-quirks.c
-@@ -291,6 +291,7 @@ static const struct hid_device_id hid_have_special_driver[] = {
+@@ -295,6 +295,7 @@ static const struct hid_device_id hid_have_special_driver[] = {
  	{ HID_USB_DEVICE(USB_VENDOR_ID_APPLE, USB_DEVICE_ID_APPLE_WELLSPRING9_JIS) },
  	{ HID_USB_DEVICE(USB_VENDOR_ID_APPLE, USB_DEVICE_ID_APPLE_WELLSPRINGT2_J140K) },
  	{ HID_USB_DEVICE(USB_VENDOR_ID_APPLE, USB_DEVICE_ID_APPLE_WELLSPRINGT2_J132) },
@@ -55,7 +55,7 @@ index 7df65c99e984..32419a34a64d 100644
  	{ HID_BLUETOOTH_DEVICE(USB_VENDOR_ID_APPLE, USB_DEVICE_ID_APPLE_ALU_WIRELESS_2009_ANSI) },
  	{ HID_BLUETOOTH_DEVICE(USB_VENDOR_ID_APPLE, USB_DEVICE_ID_APPLE_ALU_WIRELESS_2009_ISO) },
  	{ HID_BLUETOOTH_DEVICE(USB_VENDOR_ID_APPLE, USB_DEVICE_ID_APPLE_ALU_WIRELESS_2009_JIS) },
-@@ -927,6 +928,7 @@ static const struct hid_device_id hid_mouse_ignore_list[] = {
+@@ -934,6 +935,7 @@ static const struct hid_device_id hid_mouse_ignore_list[] = {
  	{ HID_USB_DEVICE(USB_VENDOR_ID_APPLE, USB_DEVICE_ID_APPLE_WELLSPRING9_JIS) },
  	{ HID_USB_DEVICE(USB_VENDOR_ID_APPLE, USB_DEVICE_ID_APPLE_WELLSPRINGT2_J140K) },
  	{ HID_USB_DEVICE(USB_VENDOR_ID_APPLE, USB_DEVICE_ID_APPLE_WELLSPRINGT2_J132) },

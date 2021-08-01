@@ -29,7 +29,7 @@ diff --git a/drivers/gpu/drm/amd/display/dc/core/dc_link_dp.c b/drivers/gpu/drm/
 index fbcd979438e2..8f78f9928df6 100644
 --- a/drivers/gpu/drm/amd/display/dc/core/dc_link_dp.c
 +++ b/drivers/gpu/drm/amd/display/dc/core/dc_link_dp.c
-@@ -3465,6 +3465,25 @@ static bool retrieve_link_cap(struct dc_link *link)
+@@ -3738,6 +3738,25 @@ static bool retrieve_link_cap(struct dc_link *link)
  		dp_hw_fw_revision.ieee_fw_rev,
  		sizeof(dp_hw_fw_revision.ieee_fw_rev));
  
